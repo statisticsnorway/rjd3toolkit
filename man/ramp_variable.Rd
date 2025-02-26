@@ -25,16 +25,16 @@ Ramp regressor
 A ramp between two dates \eqn{t_0} and \eqn{t_1} is defined as:
 \deqn{RP_t=
 \begin{cases}
--1 & \text{if }t\geq t_0 \newline
-\frac{t-t_0}{t_1-t_0}-1 & t_0< t < t_1 \newline
+-1 & \text{if }t\geq t_0 \\
+\frac{t-t_0}{t_1-t_0}-1 & t_0< t < t_1 \\
 0 & t \leq t_1
 \end{cases}
 }
 }
 \examples{
 # Ramp variable from January 2001 to September 2001
-rp <- ramp_variable(12, c(2000,1), length = 12*4, range = c(13, 21))
+rp <- ramp_variable(12, c(2000, 1), length = 12 * 4, range = c(13, 21))
 # Or equivalently
-rp<-ramp_variable(12, c(2000,1), length = 12*4, range = c("2001-01-01", "2001-09-02"))
+rp <- ramp_variable(12, c(2000, 1), length = 12 * 4, range = c("2001-01-01", "2001-09-02"))
 plot.ts(rp)
 }

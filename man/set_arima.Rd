@@ -19,7 +19,8 @@ set_arima(
 )
 }
 \arguments{
-\item{x}{the specification to customize, must be a "SPEC" class object (see details).}
+\item{x}{the specification to customize, must be a "SPEC" class object (see
+details).}
 
 \item{mean}{to fix the coefficient of the mean. If \code{mean = 0}, the mean is disabled.}
 
@@ -47,14 +48,14 @@ Function allowing to customize the ARIMA model structure
 when the automatic modelling is disabled.(see example)
 }
 \details{
-\code{x} specification param must be a JD3_X13_SPEC" class object generated with \code{rjd3x13::spec_x13()}
+\code{x} specification parameter must be a JD3_X13_SPEC" class object generated with \code{rjd3x13::x13_spec()}
 (or "JD3_REGARIMA_SPEC" generated with \code{rjd3x13::spec_regarima()} or "JD3_TRAMOSEATS_SPEC"
 generated with \code{rjd3tramoseats::spec_tramoseats()} or "JD3_TRAMO_SPEC" generated with
 \code{rjd3tramoseats::spec_tramo()}).
 }
 \examples{
 # create default spec
-# my_spec<-rjd3x13::spec_x13("rsa5c")
+# my_spec<-rjd3x13::x13_spec("rsa5c")
 # disable automatic arima modelling
 # my_spec<-set_automodel(my_spec, enabled = FALSE)
 # customize arima model
